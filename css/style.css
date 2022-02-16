@@ -2,3 +2,35 @@ body{
     margin: 0;
     padding: 0;
 }
+
+nav{
+    background-color: black;
+    width: 100%;
+}
+
+footer{
+    background-color: beige;
+    color: aqua;
+}
+
+.flex{
+    display: flex;
+    gap: var(--gap, 1rem)
+}
+
+/* Main Header */
+
+.logo{
+    margin: 2rem;
+}
+
+.primary-header{
+    align-items: center;
+    justify-content: space-between;
+}
+
+.primary-navigation{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
