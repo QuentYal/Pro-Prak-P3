@@ -1,21 +1,36 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color:azure;
 }
 
 nav{
     background-color: black;
-    width: 100%;
+    width: 25%;
 }
 
 footer{
     background-color: beige;
     color: aqua;
+    bottom: 0px;
+    position: absolute;
+    height: 2rem;
+    width: 100%;
+    text-align: center;
 }
 
 .flex{
     display: flex;
     gap: var(--gap, 1rem)
+}
+
+.column{
+    flex-direction: column;
+}
+
+.row{
+    flex-direction: row;
 }
 
 /* Main Header */
@@ -33,4 +48,37 @@ footer{
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@media screen and (max-width: 576px){
+    .primary-navigation{
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        background: steelblue;
+    }
+}
+
+.mobile-nav-toggle{
+    position: absolute;
+    z-index: 9999;
+    background: url("/icon/icons8-article-24.png");
+    width: 1rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+}
+
+.sidemenu{
+    background: blue;
+    position: fixed;
+    border: 0.2rem solid;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
 }
