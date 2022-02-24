@@ -1,5 +1,9 @@
 html{
   height: 150%;
+  background-color: lightgray;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .PopNews{
@@ -27,12 +31,7 @@ html{
 
 }
 body {
-  background-color: lightgray;
-  max-height: 200%;
-  height: 200%;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  overflow-y: auto;
+
 }
 
 .Imglist{
