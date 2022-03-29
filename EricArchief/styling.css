@@ -30,9 +30,6 @@ html{
   cursor: pointer;
 
 }
-body {
-
-}
 
 .Imglist{
   height: 20%;
@@ -60,9 +57,9 @@ body {
 .card4Pop{
   top: 80%;
 }
-nav {
-  
-}
+
+
+
 ul , ul:visited{
   list-style-type: none;
   margin: 0;
@@ -91,6 +88,12 @@ li a {
   text-decoration: none;
   color: blueviolet;
 }
+
+a:hover{
+  background-color: rgb(104, 196, 191);
+  text-decoration: none;
+}
+
 .active {
   background-color: rgb(104, 196, 191);
   text-decoration: none;
@@ -113,3 +116,38 @@ li a {
   cursor: pointer;
 }
 
+.banner{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.flex{
+  display: flex;
+  gap: var(--gap, 1rem)
+}
+
+.column{
+  flex-direction: column;
+}
+
+.row{
+  flex-direction: row;
+}
+
+.main{
+  margin-left: 15rem;
+  padding: 0px 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding-right: 2rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
