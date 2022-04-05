@@ -1,9 +1,19 @@
+<?php 
+session_start();
+
+	include("scripts/connect_db.php");
+	include("functions/functions.php");
+
+	$user_data = check_login($con);
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
 
     <title>Hello, world!</title>
-    <link rel="stylesheet" href="EricArchief/styling.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">

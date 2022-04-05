@@ -1,191 +1,179 @@
-:root{
-    --primary: grey;
-    --light: white;
-    --dark: black;
-}
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+html{
+  height: 150%;
+  background-color: lightgray;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+.PopNews{
+  position: fixed;
+  background-color: rgba(168, 217, 219, 0.541);
+  border: 2.5px dotted turquoise;
+  max-width: 20%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 1%;
 }
-
-.flex{
-    display: flex;
-    gap: var(--gap, 1rem)
-}
-
-.column{
-    flex-direction: column;
-}
-
-.row{
-    flex-direction: row;
-}
-
-.main{
-    margin-left: 15rem;
-    padding: 0px 10px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    padding-right: 2rem;
-  }
-  
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-
-/* Main Header */
-
-.container{
-    max-width: 1280px;
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    background-color: var(--dark);
-    padding: 0.1rem 0.5rem;
-    border-bottom: 3px solid var(--primary);
-}
-
-h1{
-    color: #FFF;
-    font-size: 3rem;
-    font-weight: 900;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.hamburger{
-    display: block;
-    position: relative;
-    z-index: 1;
-
-    user-select: none;
-
-    appearance: none;
-    border: none;
-    outline: none;
-    background: none;
-    cursor: pointer;
-}
-
-.hamburger span{
-    display: block;
-    width: 2rem;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-
-    background-color: var(--light);
-    border-radius: 6px;
-    z-index: 1;
-
-    transform-origin: 0 0;
-
-    transition: 0.4s;
-}
-
-.hamburger:hover span:nth-child(2){
-    transform: translateX(1rem);
-    background-color: var(--primary);
-}
-
-.hamburger.is-active span:nth-child(1){
-    transform: translate(0px, -2px) rotate(45deg);
-}
-.hamburger.is-active span:nth-child(2){
-    opacity: 0;
-    transform: translateX(2rem);
-}
-
-.hamburger.is-active span:nth-child(3){
-    transform: translate(-3px, 3px) rotate(-45deg);
-}
-
-.hamburger.is-active:hover span{
-    background-color: var(--primary);
-}
-
-.menu{
-    display: none;
-    flex: 1 1 0%;
-    justify-content: flex-end;
-    margin: 0 -16px;
-}
-
-.menu a{
-    color: #FFF;
-    margin: 0 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: 0.4s;
-    padding: 0.5rem 1rem;
-    border-radius: 99px;
-}
-
-.menu a.is-active, .menu a:hover{
-    background-color: var(--primary);
-}
-
-@media screen and (max-width: 576px){
-
-    .sidemenu{
-        display: none;
-    }
+.card1Pop, .card2Pop, .card3Pop, .card4Pop{
+  position: fixed;
+  max-width: 15%;
+  border: 2.5px dotted turquoise;
+  background-color: aliceblue;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  left: 3;
+  transition: background-color .5s;
+  cursor: pointer;
 
 }
 
-@media screen and (min-width: 768px){
-    
-    .hamburger{
-        display: none;
-    }
+.Imglist{
+  height: 20%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  transition: transform .5s;
+  transform-origin: left 50%;
+}
+.Imglist:hover{
+  transform: scale(5);
 
-    .menu{
-        display: block;
-    }
+}
+.card1Pop {
+  top: 15%;
+}
 
+.card2Pop{
+  top: 35%;
+}
+.card3Pop{
+  top: 55%;
+}
+.card4Pop{
+  top: 80%;
 }
 
 
 
-.sidemenu{
-    height: 100%;
-    width: 15rem;
-    position:fixed;
-    top: 0;
-    left: 0;
-    background-color: beige;
-    overflow-x: hidden;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-right: 2rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
+ul , ul:visited{
+  list-style-type: none;
+  margin: 0;
+  padding: 8px;
+  overflow: hidden;
+  background-color: lightblue;
+  position: fixed;
+  top: 0;
+  left: 82%;
+  box-shadow: 0px 8px 16px 0px rgb(141, 204, 224);
+  color: blueviolet;
+  width: 100%;
+}
+li {
+  display: inline;
+  float: left;
+  border-right: 1px dotted rgb(37, 144, 177);
+}
+li:last-child {
+  border-right: none;
+}
+li a {
+  display: block;
+  padding: 8px;
+  background-color: lightblue;
+  text-decoration: none;
+  color: blueviolet;
+}
+
+a:hover{
+  background-color: rgb(104, 196, 191);
+  text-decoration: none;
+}
+
+.active {
+  background-color: rgb(104, 196, 191);
+  text-decoration: none;
+}
+
+.Logo{
+  position: relative;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  left: 17%;
+  cursor: pointer;
+}
+.Logo2{
+  position: relative;
+  top:0;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  cursor: pointer;
 }
 
 .banner{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    margin-bottom: 2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  margin-bottom: 2rem;
+}
+
+.flex{
+  display: flex;
+  gap: var(--gap, 1rem)
+}
+
+.column{
+  flex-direction: column;
+}
+
+.row{
+  flex-direction: row;
+}
+
+.main{
+  margin-left: 15rem;
+  padding: 0px 10px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding-right: 2rem;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+#text{
+
+    height: 25px;
+    border-radius: 5px;
+    padding: 4px;
+    border: solid thin #aaa;
+    width: 100%;
+}
+
+#button{
+
+    padding: 10px;
+    width: 100px;
+    color: white;
+    background-color: lightblue;
+    border: none;
+}
+
+#box{
+
+    background-color: grey;
+    margin: auto;
+    width: 300px;
+    padding: 20px;
 }
